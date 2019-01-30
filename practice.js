@@ -13,6 +13,10 @@
   Give it a key of name with the value being your name, and another key of age with the value being your age. 
   Then alert your name using dot notation.
 */
+var me = {name:'patrick',
+  age:23
+}
+//alert(me.name);
 
 //Code here
 
@@ -26,7 +30,14 @@
 */
 
 //Code here
-
+var favoriteThings = {
+  band:'Chon',
+  food:'Truffle Fries',
+  person:'My wife',
+  book:'Catch 22',
+  movie:'Fight Club',
+  holiday:'St. Patricks'
+}
 
 
 /*
@@ -34,13 +45,15 @@
 */
 
 //Code here
-
+favoriteThings.car = 'Bugatti';
+favoriteThings.brand = 'Tesla';
 
 
 /*
   Now change the value of the food key in your favoriteThings object to be 'Chicken Nuggets' and change the value of the book key in your favoriteThings object to be 'Harry Potter'.
 */
-
+favoriteThings.food = 'Chicken Nuggets';
+favoriteThings.book = 'Harry Potter';
 //Code here
 
 
@@ -56,15 +69,20 @@
 */
 
 //Code here
+var backPack = {
 
+};
+var item = 'firstPocket'
+backPack[item] = 'chapstick';
+backPack.color = 'black';
 
 
 /*
   After you do the above, alert your entire backPack object.
 */
 
-//Code here
 
+//alert(backPack);
 
 
 /*
@@ -72,6 +90,7 @@ You probably noticed that it just alerted [object Object].
 Alerting to see the data in your Object doesn't work so well.
 Instead, console.log your whole backPack object and then check out the console. 
 */
+console.log(backPack);
 
 //Code here
 
@@ -98,6 +117,8 @@ var user2 = {
 
 //Code Here
 
+user2.name = 'Tyler S. McGinnis';
+user2.email = 'tyler.mcginnis@devmounta.in'
 
 
 
@@ -120,13 +141,17 @@ var user2 = {
 */
 
 //Code Here
+var methodCollection = {
 
+}
 
 
 /*
   Now add two methods (functions that are properties on objects) to your methodCollection object. 
   One called 'alertHello' which alerts 'hello' and another method called 'logHello' which logs 'hello' to the console. 
 */
+methodCollection.alertHello=function (){alert('hello');}
+methodCollection.logHello=function () {console.log('hello');}
 
 //Code Here
 
@@ -135,8 +160,9 @@ var user2 = {
 /*
   Now call your alertHello and logHello methods.
 */
-
 //Code Here
+methodCollection.alertHello
+methodCollection.logHello
 
 
 
@@ -149,6 +175,14 @@ var user2 = {
 
 //Code Here
 
+function makePerson(name,birthday,ssn,){
+ return  {
+   name,
+  birthday,
+  ssn
+}
+
+}
 
 
 ////////// PROBLEM 7 //////////
@@ -159,5 +193,9 @@ var user2 = {
 */
 
 //Code Here
-
+function makeCard(cardNumber,expirationDate,securityCode){
+ return {cardNumber,
+  expirationDate,
+  securityCode}
+}
 
